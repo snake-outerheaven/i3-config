@@ -70,29 +70,10 @@ bindsym $mod+p exec --no-startup-id maim ~/Imagens/prints/$(date +%Y-%m-%d-%H%M%
 # bind maim for area printscreen (-s enables area selection)
 bindsym --release $mod+Shift+p exec --no-startup-id maim -s ~/Imagens/prints/$(date +%Y-%m-%d-%H%M%S)_area.png
 
-
-# --- AYU DARK COLORS ---
-set $bg      #0A0E14
-set $fg      #B3B1AD
-set $red     #F07178
-set $green   #7FD962
-set $yellow  #E6B450
-set $blue    #59C2FF
-set $purple  #D2A6FF
-set $aqua    #95E6CB
-set $gray    #5C6773
-set $bg_alt  #131721
-
 # --- WINDOW STYLE (SOLID & FLAT) ---
 default_border pixel 1
 default_floating_border pixel 1
 smart_borders on
-
-#                       border    bg       text     indicator child_border
-client.focused          $yellow   $bg_alt  $fg      $bg_alt   $yellow
-client.focused_inactive $bg_alt   $bg      $gray    $bg       $bg_alt
-client.unfocused        $bg_alt   $bg      $gray    $bg       $bg_alt
-client.urgent           $red      $bg      $red     $red      $red
 
 # move current window to scratchpad
 bindsym $mod+Shift+minus move scratchpad
@@ -257,22 +238,37 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
+# ── IBM PC VGA ANSI Palette (EGA 16-color) ──
+set $bg      #000000
+set $fg      #AAAAAA
+set $red     #AA0000
+set $green   #00AA00
+set $yellow  #AA5500
+set $blue    #0000AA
+set $purple  #AA00AA
+set $aqua    #00AAAA
+set $gray    #555555
+set $bg_alt  #555555
+
+#                       border    bg       text     indicator child_border
+client.focused          $blue     $bg_alt  $fg      $bg_alt   $blue
+client.focused_inactive $bg_alt   $bg      $gray    $bg       $bg_alt
+client.unfocused        $bg_alt   $bg      $gray    $bg       $bg_alt
+client.urgent           $red      $bg      $red     $red      $red
 
 bar {
     position top
     status_command bumblebee-status \
         -m pasink pasource playerctl datetime battery \
-	-t default
+        -t default
     colors {
-        background #0A0E14
-        statusline #B3B1AD
-        separator  #5C6773
+        background #000000
+        statusline #AAAAAA
+        separator  #555555
 
-        focused_workspace  #E6B450 #131721 #B3B1AD
-        active_workspace   #131721 #131721 #B3B1AD
-        inactive_workspace #0A0E14 #0A0E14 #5C6773
-        urgent_workspace   #F07178 #F07178 #0A0E14
+        focused_workspace  #0000AA #555555 #AAAAAA
+        active_workspace   #555555 #555555 #AAAAAA
+        inactive_workspace #000000 #000000 #555555
+        urgent_workspace   #AA0000 #AA0000 #000000
     }
 }
