@@ -7,10 +7,10 @@ configuration {
 @theme "/dev/null"
 
 * {
-    /* ── Gruvbox Dark ── */
+    /* ── Gruvbox Dark (red highlight) ── */
     bg:     #282828;
     fg:     #ebdbb2;
-    accent: #98971a;   /* green highlight */
+    accent: #cc241d;
     bg-alt: #3c3836;
     gray:   #928374;
 

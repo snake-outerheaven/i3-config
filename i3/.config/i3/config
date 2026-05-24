@@ -241,7 +241,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# ── Gruvbox Dark (highlight: green) ──
+# ── Gruvbox Dark (highlight: red) ──
 set $bg      #282828
 set $fg      #ebdbb2
 set $red     #cc241d
@@ -254,13 +254,13 @@ set $gray    #928374
 set $bg_alt  #3c3836
 
 #                       border    bg       text     indicator child_border
-client.focused          $green    $bg_alt  $fg      $bg_alt   $green
+client.focused          $red      $bg_alt  $fg      $bg_alt   $red
 client.focused_inactive $bg_alt   $bg      $gray    $bg       $bg_alt
 client.unfocused        $bg_alt   $bg      $gray    $bg       $bg_alt
 client.urgent           $red      $bg      $red     $red      $red
 
 bar {
-    position top
+    position bottom
     status_command bumblebee-status \
         -m pasink pasource playerctl datetime battery \
         -t gruvbox-powerline
@@ -269,7 +269,7 @@ bar {
         statusline #ebdbb2
         separator  #928374
 
-        focused_workspace  #98971a #3c3836 #ebdbb2
+        focused_workspace  #cc241d #3c3836 #ebdbb2
         active_workspace   #3c3836 #3c3836 #ebdbb2
         inactive_workspace #282828 #282828 #928374
         urgent_workspace   #cc241d #cc241d #282828
