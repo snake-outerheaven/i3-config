@@ -82,8 +82,8 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 #gaps config
-gaps inner 10
-gaps outer 5
+gaps inner 5
+gaps outer 10
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
