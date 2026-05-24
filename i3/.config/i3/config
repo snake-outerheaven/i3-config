@@ -43,7 +43,7 @@ exec_always --no-startup-id xrandr --output HDMI-A-0 --mode 1920x1080 --rate 100
 exec_always --no-startup-id 'picom'
 
 #read feh bg script
-exec --no-startup-id ~/.fehbg
+#exec --no-startup-id ~/.fehbg
 
 #configure copyq daemon for clipboard manager
 exec --no-startup-id copyq --start-server
@@ -238,20 +238,20 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# ── IBM PC VGA ANSI Palette (EGA 16-color) ──
-set $bg      #000000
-set $fg      #AAAAAA
-set $red     #AA0000
-set $green   #00AA00
-set $yellow  #AA5500
-set $blue    #0000AA
-set $purple  #AA00AA
-set $aqua    #00AAAA
-set $gray    #555555
-set $bg_alt  #555555
+# ── Gruvbox Dark (highlight: green) ──
+set $bg      #282828
+set $fg      #ebdbb2
+set $red     #cc241d
+set $green   #98971a
+set $yellow  #d79921
+set $blue    #458588
+set $purple  #b16286
+set $aqua    #689d6a
+set $gray    #928374
+set $bg_alt  #3c3836
 
 #                       border    bg       text     indicator child_border
-client.focused          $blue     $bg_alt  $fg      $bg_alt   $blue
+client.focused          $green    $bg_alt  $fg      $bg_alt   $green
 client.focused_inactive $bg_alt   $bg      $gray    $bg       $bg_alt
 client.unfocused        $bg_alt   $bg      $gray    $bg       $bg_alt
 client.urgent           $red      $bg      $red     $red      $red
@@ -260,15 +260,15 @@ bar {
     position top
     status_command bumblebee-status \
         -m pasink pasource playerctl datetime battery \
-        -t default
+        -t gruvbox-powerline
     colors {
-        background #000000
-        statusline #AAAAAA
-        separator  #555555
+        background #282828
+        statusline #ebdbb2
+        separator  #928374
 
-        focused_workspace  #0000AA #555555 #AAAAAA
-        active_workspace   #555555 #555555 #AAAAAA
-        inactive_workspace #000000 #000000 #555555
-        urgent_workspace   #AA0000 #AA0000 #000000
+        focused_workspace  #98971a #3c3836 #ebdbb2
+        active_workspace   #3c3836 #3c3836 #ebdbb2
+        inactive_workspace #282828 #282828 #928374
+        urgent_workspace   #cc241d #cc241d #282828
     }
 }

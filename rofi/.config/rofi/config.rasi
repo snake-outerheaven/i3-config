@@ -7,12 +7,12 @@ configuration {
 @theme "/dev/null"
 
 * {
-    /* ── IBM PC VGA ANSI Palette ── */
-    bg:     #000000;
-    fg:     #AAAAAA;
-    accent: #0000AA;
-    bg-alt: #555555;
-    gray:   #555555;
+    /* ── Gruvbox Dark ── */
+    bg:     #282828;
+    fg:     #ebdbb2;
+    accent: #98971a;   /* green highlight */
+    bg-alt: #3c3836;
+    gray:   #928374;
 
     background-color: transparent;
     text-color: @fg;
@@ -24,7 +24,7 @@ window {
     border-color: @accent;
     border-radius: 0;
     padding: 15px;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: rgba(40, 40, 40, 0.95);
 }
 
 mainbox {
