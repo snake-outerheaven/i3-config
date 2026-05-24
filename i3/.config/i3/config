@@ -43,7 +43,7 @@ exec_always --no-startup-id xrandr --output HDMI-A-0 --mode 1920x1080 --rate 100
 exec_always --no-startup-id 'picom'
 
 #read feh bg script
-#exec --no-startup-id ~/.fehbg
+exec --no-startup-id ~/.fehbg
 
 #configure copyq daemon for clipboard manager
 exec --no-startup-id copyq --start-server
