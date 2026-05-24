@@ -71,17 +71,17 @@ bindsym $mod+p exec --no-startup-id maim ~/Imagens/prints/$(date +%Y-%m-%d-%H%M%
 bindsym --release $mod+Shift+p exec --no-startup-id maim -s ~/Imagens/prints/$(date +%Y-%m-%d-%H%M%S)_area.png
 
 
-# --- GRUVBOX LIGHT COLORS ---
-set $bg      #fbf1c7
-set $fg      #3c3836
-set $red     #9d0006
-set $green   #79740e
-set $yellow  #b57614
-set $blue    #076678
-set $purple  #8f3f71
-set $aqua    #427b58
-set $gray    #928374
-set $bg_alt  #ebdbb2
+# --- AYU DARK COLORS ---
+set $bg      #0A0E14
+set $fg      #B3B1AD
+set $red     #F07178
+set $green   #7FD962
+set $yellow  #E6B450
+set $blue    #59C2FF
+set $purple  #D2A6FF
+set $aqua    #95E6CB
+set $gray    #5C6773
+set $bg_alt  #131721
 
 # --- WINDOW STYLE (SOLID & FLAT) ---
 default_border pixel 1
@@ -264,25 +264,15 @@ bar {
     position top
     status_command bumblebee-status \
         -m pasink pasource playerctl datetime battery \
-        -t gruvbox-powerline-light
-
+	-t default
     colors {
-        # bar background on Offwhite (bg) e text in Brown (fg)
-        background #fbf1c7
-        statusline #3c3836
-        separator  #928374
+        background #0A0E14
+        statusline #B3B1AD
+        separator  #5C6773
 
-        #                  border  bg      text
-        # focused workspace: dark Yellow border with bg medium beige
-        focused_workspace  #b57614 #ebdbb2 #3c3836
-        
-        # Active workspace (in other monitor):
-        active_workspace   #ebdbb2 #ebdbb2 #3c3836
-        
-        # Workspaces inativas: offwhite bg (same as bar)
-        inactive_workspace #fbf1c7 #fbf1c7 #928374
-        
-        # Urgency: Deep Red.
-        urgent_workspace   #9d0006 #9d0006 #fbf1c7
+        focused_workspace  #E6B450 #131721 #B3B1AD
+        active_workspace   #131721 #131721 #B3B1AD
+        inactive_workspace #0A0E14 #0A0E14 #5C6773
+        urgent_workspace   #F07178 #F07178 #0A0E14
     }
 }

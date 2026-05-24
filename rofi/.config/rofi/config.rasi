@@ -1,19 +1,20 @@
 configuration {
     font: "Cascadia Code 10";
-    show-icons: false;
-    display-drun: "»";
+    show-icons: true;
+    display-drun: " >>  ";               /* ícone de pesquisa (Nerd Font) */
     drun-display-format: "{name}";
+    icon-theme: "Papirus";               /* tema de ícones do sistema */
 }
 
 @theme "/dev/null"
 
 * {
-    /* Paleta Gruvbox Light */
-    bg: #fbf1c7;      /* bg0_hard */
-    fg: #3c3836;      /* fg1 */
-    accent: #af3a03;  /* Orange (escurecido para legibilidade no claro) */
-    bg-alt: #ebdbb2;  /* bg1 (Seleção) */
-    gray: #928374;    /* Gray */
+    /* ── Paleta Ayu Dark ── */
+    bg: #0A0E14;       /* fundo principal */
+    fg: #B3B1AD;       /* texto */
+    accent: #FFB454;   /* laranja destaque */
+    bg-alt: #1F2430;   /* fundo de seleção (mais claro) */
+    gray: #5C6773;     /* comentários / inativo */
 
     background-color: transparent;
     text-color: @fg;
@@ -22,9 +23,10 @@ configuration {
 window {
     width: 30%;
     border: 2px;
-    border-color: @bg-alt; /* Borda sutil para não contrastar demais */
+    border-color: @accent;                      /* borda laranja */
+    border-radius: 0;                           /* cantos quadrados, i3‑style */
     padding: 15px;
-    background-color: @bg;
+    background-color: rgba(10, 14, 20, 0.95);   /* semi‑transparente */
 }
 
 mainbox {
@@ -41,6 +43,7 @@ inputbar {
 prompt {
     text-color: @accent;
     padding: 0 10px 0 0;
+    font: "JetBrains Mono Nerd Font 10";  /* para o ícone, se instalada */
 }
 
 entry {
@@ -57,6 +60,7 @@ listview {
 
 element {
     padding: 8px;
+    border-radius: 0;   /* quadrado */
 }
 
 element selected {
