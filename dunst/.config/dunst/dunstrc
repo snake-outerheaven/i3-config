@@ -1,6 +1,6 @@
 [global]
     frame_width = 2
-    frame_color = "#928374"
+    frame_color = "#93a1a1"
     separator_color = "frame"
 
     font = Cascadia Mono 9
@@ -8,19 +8,19 @@
     alignment = left
 
 [urgency_low]
-    background = "#282828"
-    foreground = "#928374"
-    frame_color = "#928374"
+    background = "#fdf6e3"
+    foreground = "#93a1a1"
+    frame_color = "#93a1a1"
     timeout = 10
 
 [urgency_normal]
-    background = "#3c3836"
-    foreground = "#ebdbb2"
-    frame_color = "#cc241d"
+    background = "#eee8d5"
+    foreground = "#657b83"
+    frame_color = "#93a1a1"
     timeout = 10
 
 [urgency_critical]
-    background = "#282828"
-    foreground = "#cc241d"
-    frame_color = "#cc241d"
+    background = "#fdf6e3"
+    foreground = "#dc322f"
+    frame_color = "#dc322f"
     timeout = 0

@@ -7,12 +7,12 @@ configuration {
 @theme "/dev/null"
 
 * {
-    /* ── Gruvbox Dark (red highlight) ── */
-    bg:     #282828;
-    fg:     #ebdbb2;
-    accent: #cc241d;
-    bg-alt: #3c3836;
-    gray:   #928374;
+    /* ── Solarized Light (gray highlight) ── */
+    bg:     #fdf6e3;
+    fg:     #657b83;
+    accent: #93a1a1;   /* base1 – gray highlight */
+    bg-alt: #eee8d5;
+    gray:   #93a1a1;
 
     background-color: transparent;
     text-color: @fg;
@@ -24,7 +24,7 @@ window {
     border-color: @accent;
     border-radius: 0;
     padding: 15px;
-    background-color: rgba(40, 40, 40, 0.95);
+    background-color: rgba(253, 246, 227, 0.95);  /* #fdf6e3 with opacity */
 }
 
 mainbox {

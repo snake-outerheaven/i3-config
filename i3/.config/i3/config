@@ -104,7 +104,8 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec kitty
+#bindsym $mod+Return exec kitty
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -241,20 +242,20 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# ── Gruvbox Dark (highlight: red) ──
-set $bg      #282828
-set $fg      #ebdbb2
-set $red     #cc241d
-set $green   #98971a
-set $yellow  #d79921
-set $blue    #458588
-set $purple  #b16286
-set $aqua    #689d6a
-set $gray    #928374
-set $bg_alt  #3c3836
+# ── Solarized Light (highlight: gray) ──
+set $bg      #fdf6e3
+set $fg      #657b83
+set $red     #dc322f
+set $green   #859900
+set $yellow  #b58900
+set $blue    #268bd2
+set $purple  #6c71c4
+set $aqua    #2aa198
+set $gray    #93a1a1
+set $bg_alt  #eee8d5
 
 #                       border    bg       text     indicator child_border
-client.focused          $red      $bg_alt  $fg      $bg_alt   $red
+client.focused          $gray     $bg_alt  $fg      $bg_alt   $gray
 client.focused_inactive $bg_alt   $bg      $gray    $bg       $bg_alt
 client.unfocused        $bg_alt   $bg      $gray    $bg       $bg_alt
 client.urgent           $red      $bg      $red     $red      $red
@@ -263,15 +264,15 @@ bar {
     position bottom
     status_command bumblebee-status \
         -m pasink pasource playerctl datetime battery \
-        -t gruvbox-powerline
+        -t default
     colors {
-        background #282828
-        statusline #ebdbb2
-        separator  #928374
+        background #fdf6e3
+        statusline #657b83
+        separator  #93a1a1
 
-        focused_workspace  #cc241d #3c3836 #ebdbb2
-        active_workspace   #3c3836 #3c3836 #ebdbb2
-        inactive_workspace #282828 #282828 #928374
-        urgent_workspace   #cc241d #cc241d #282828
+        focused_workspace  #93a1a1 #eee8d5 #657b83
+        active_workspace   #eee8d5 #eee8d5 #657b83
+        inactive_workspace #fdf6e3 #fdf6e3 #93a1a1
+        urgent_workspace   #dc322f #dc322f #fdf6e3
     }
 }
