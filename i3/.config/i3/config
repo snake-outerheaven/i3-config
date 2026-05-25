@@ -242,8 +242,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# ── Gruvbox Light (highlight: red) ──
-set $bg      #fbf1c7
+# ── Gruvbox Light Soft (highlight: red) ──
+set $bg      #f2e5bc
 set $fg      #3c3836
 set $red     #cc241d
 set $green   #98971a
@@ -266,13 +266,13 @@ bar {
         -m pasink pasource playerctl datetime battery \
         -t gruvbox-powerline-light
     colors {
-        background #fbf1c7
+        background #f2e5bc
         statusline #3c3836
         separator  #928374
 
         focused_workspace  #cc241d #ebdbb2 #3c3836
         active_workspace   #ebdbb2 #ebdbb2 #3c3836
-        inactive_workspace #fbf1c7 #fbf1c7 #928374
-        urgent_workspace   #cc241d #cc241d #fbf1c7
+        inactive_workspace #f2e5bc #f2e5bc #928374
+        urgent_workspace   #cc241d #cc241d #f2e5bc
     }
 }
